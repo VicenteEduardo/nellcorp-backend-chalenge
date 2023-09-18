@@ -18,4 +18,10 @@ class Account extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+
+public function transactions()
+{
+    return $this->hasMany(Transaction::class);
+}
 }
